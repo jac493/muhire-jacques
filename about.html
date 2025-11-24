@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Real Jac Portfolio - Software Developer</title>
+  <meta name="description" content="Portfolio of Real Jac, software development student at TVET Rwanda. Explore projects, skills, and contact information.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Real Jac</h1>
+    <button id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p class="about-text">
+      Hello! I'm Real Jac, a passionate software development student at TVET Rwanda.  
+      I love creating clean, functional websites and apps using modern web technologies.  
+      My journey started with HTML and CSS, and now I enjoy building dynamic applications with JavaScript and Vue.js.  
+      When I'm not coding, I enjoy learning new skills, collaborating with others, and exploring tech innovations.
+    </p>
+
+    <!-- Image Slider -->
+    <div class="slider">
+      <div class="slides">
+        <img src="jac1.jpg" alt="real jac" class="active">
+        <img src="ss.jpg" alt="sister">
+        <img src="sister.jpg" alt="sister">
+         <img src="mee.jpg" alt="muhire jacques">
+         <img src="realjac.jpg" alt="muhire jacques">
+         <img src="yvone.jpeg" alt="yvone">
+         
+        
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2025 Muhire Jacques (Real Jac). All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://facebook.com/M Real Jac" target="_self"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/_its_real_jac_" target="_self"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://github.com/jac493" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    // Image Slider (One at a time)
+    const images = document.querySelectorAll('.slides img');
+    let index = 0;
+
+    function showSlide() {
+      images.forEach((img, i) => {
+        img.classList.remove('active');
+        if (i === index) {
+          img.classList.add('active');
+        }
+      });
+      index = (index + 1) % images.length;
+    }
+
+    setInterval(showSlide, 3000); // 3 seconds per slide
+
+    // Start the slider
+    showSlide();
+  </script>
+
+</body>
+</html>

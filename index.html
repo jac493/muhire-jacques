@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Real Jac Portfolio - Software Developer</title>
+  <meta name="description" content="Portfolio of Real Jac, software development student at TVET Rwanda. Explore projects, skills, and contact information.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Real Jac</h1>
+    <button id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Hi, I'm Real Jac</h2>
+    <p>Software Development Student at TVET Rwanda</p>
+    <a href="projects.html" class="btn">Explore My Work</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Muhire Jacques (Real Jac). All rights reserved.</p>
+    <div class="social-links">
+       <a href="https://facebook.com/M Real Jac" target="_self"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/_its_real_jac_" target="_self"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a> <a href="https://github.com/jac493" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
